@@ -1,0 +1,423 @@
+/* Reset & basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background: white;
+  color: #000;
+  min-height: 100vh;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
+/* Headings */
+h1 {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.6rem;
+  margin: 2rem 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2.2rem;
+  margin: 2rem 0;
+  font-weight: 600;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.7em;
+}
+
+
+
+.S3 .btn {
+  font-size: 1.7rem;        /* taille de texte légèrement augmentée */
+  padding: 1rem 2.2rem;     /* padding modéré */
+  min-width: 160px;         /* largeur suffisante mais pas trop */
+  border-radius: 0.6rem;    /* coins doux mais pas trop ronds */
+}
+
+.button-container .btn {
+   font-size: 1.5rem;
+  padding: 1.2rem 1.8rem;   /* plus de hauteur (vertical padding ↑), largeur ok */
+  min-width: 120px;
+  border-radius: 0.5rem;
+}
+
+.btn-dark {
+  margin-left: 1.2rem;
+}
+
+.btn-secondart {
+  margin-right: 2rem;
+}
+
+
+/* Text alignment */
+.textaligncenter {
+  text-align: center;
+}
+
+/* Utility font weights */
+.extralight { font-weight: 200; }
+.medium { font-weight: 500; }
+.semibold { font-weight: 600; }
+.bold { font-weight: 700; }
+
+/* Flexbox utilities */
+.flexrow { display: flex; flex-direction: row; }
+.flexcolumn { display: flex; flex-direction: column; }
+.alignitmcenter { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+
+/* Spacing utilities */
+.gap3 { gap: 3rem; }
+.gap35 { gap: 3.5rem; }
+.marginleft2 { margin-left: 2rem; }
+.marginleft8 { margin-left: 8rem; }
+.marginright3 { margin-right: 3rem; }
+.marginright8 { margin-right: 8rem; }
+.margintop2 { margin-top: 2rem; }
+.margintop3 { margin-top: 3rem; }
+.margintop6 { margin-top: 6rem; }
+.marginbottom3 { margin-bottom: 3rem; }
+.marginbottom6 { margin-bottom: 6rem; }
+.paddingtop4 { padding-top: 4rem; }
+.padding3 { padding: 3rem; }
+
+/* Images */
+.img-rond {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.img-envp {
+  width: 44px;
+  height: 44px;
+}
+
+.img-logo {
+  width: 32px;
+  height: 32px;
+}
+
+.img-line {
+  width: 150px;
+  height: 3px;
+
+}
+
+/* Cards */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 2rem;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background-color: white;
+  /* height: 450px; <-- supprimer */
+  min-height: 450px; /* optionnel, si tu veux une taille minimale */
+   flex: 1 1 300px; /* croît et rétrécit */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;          /* prend tout l’espace vertical */
+  padding-bottom: 1rem;
+}
+
+.button-container {
+  margin-top: auto;      /* pousse les boutons en bas */
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-shrink: 0;
+  width: 100%;
+   flex-wrap: wrap; 
+}
+
+
+
+
+/* Header container */
+.header-container {
+  color: black;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.5rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+/* Navigation */
+.leftnav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.rightnav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  gap: 3.5rem;
+  margin-right: 3rem;
+}
+
+.rightnav ul {
+   list-style: none; 
+  display: flex;
+  gap: 2rem;
+}
+
+.rightnav ul li a {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+/* Section full layout */
+.fullsection {
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+  margin-left: 8rem;
+  margin-top: 2rem;
+}
+
+.portfolio-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.5rem;
+    align-items: stretch; /* **Important** pour que toutes les cartes aient la même hauteur */
+}
+
+/* Specific sections */
+.S1 {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  margin-left: 2rem;
+}
+
+.S2 {
+  align-self: center;
+}
+
+.S3 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding-top: 4rem;
+  max-width: 500px;
+}
+
+/* Footer */
+footer p {
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  margin-right: 8rem;
+  text-align: right;
+}
+
+/* Petit écran : de 414px à moins de 768px (taille tablette) */
+@media (min-width: 414px) and (max-width: 767px) {
+  html {
+    font-size: 50%;
+  }
+  .header-container {
+    margin: 0 2rem;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+  .leftnav {
+    margin-left: 0;
+  }
+  .rightnav {
+    margin-right: 0;
+    gap: 1rem;
+  }
+  .rightnav ul {
+    display: none;
+  }
+  .fullsection {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  }
+  .S1, .S3 {
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+  .S2 {
+    display: none;
+  }
+  .img-rond {
+    width: 180px;
+    height: 180px;
+  }
+  .img-logo {
+    width: 24px;
+    height: 24px;
+  }
+  .card {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+  .card-text {
+    font-size: 1.3rem;
+  }
+
+    .button-container {
+    margin-top: 3rem; /* réduire l’espace au-dessus (avant c’était 2rem) */
+  }
+  .button-container a.btn {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.4rem;
+     min-width: 100px;
+  }
+
+    .card-body p {
+    font-size: 1.3rem; /* texte plus petit */
+  }
+
+}
+
+/* Tablette : de 768px jusqu'à 1439px (taille écran normal) */
+@media (min-width: 768px) and (max-width: 1439px) {
+  html {
+    font-size: 56.25%;
+  }
+  .fullsection {
+   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 6rem auto;
+  padding: 0 4rem;
+  gap: 4rem;
+  }
+  .header-container {
+    margin: 0 4rem;
+  }
+  .img-rond {
+    width: 220px;
+    height: 220px;
+  }
+  .img-logo {
+    width: 28px;
+    height: 28px;
+  }
+
+    .card-body p {
+    font-size: 1.5rem;
+  }
+  .button-container a.btn {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.6rem;
+    min-width: 120px;
+  }
+}
+
+/* Grand écran : 1440px et plus */
+@media (min-width: 1440px) {
+  html {
+    font-size: 62.5%;
+  }
+  .fullsection {
+    max-width: 100%;
+    margin: 15rem auto 0 auto;
+    padding: 0 5rem; /* réduire le padding horizontal */
+    gap: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .img-rond {
+    width: 300px;
+    height: 300px;
+  }
+  .img-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+    .button-container {
+    margin-top: auto; /* pousse les boutons en bas */
+  }
+  .button-container a.btn {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    
+  }
+
+  .portfolio-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3.5rem;
+  max-width: 100%; /* pour ne pas limiter la largeur */
+}
+
+  .card {
+    width: 400px;      /* largeur fixe raisonnable */
+    max-width: 400px;  /* limite la largeur max */
+    min-height: 480px; /* hauteur minimale suffisante */
+    height: auto;      /* laisse grandir si contenu plus grand */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-body {
+    flex-grow: 1; /* pour que le corps prenne tout l’espace vertical restant */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* espace entre texte et boutons */
+  }
+
+  .card-body p {
+    font-size: 1.7rem;
+  }
+  
+
+}
